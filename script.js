@@ -4,7 +4,7 @@ window.addEventListener("scroll", function () {
     if (window.scrollY > 0) {
         navbar.classList.add("scrolled");
         logo.style.filter = "invert(0%)";
-        console.log(window.scrollY); // vedi console js sul browser, ottimizza le prestazioni
+        // console.log(window.scrollY); // vedi console js sul browser, ottimizza le prestazioni
     } else {
         navbar.classList.remove("scrolled");
         logo.style.filter = "invert(100%)";
