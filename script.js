@@ -10,6 +10,7 @@ window.addEventListener("scroll", function () {
         logo.style.filter = "invert(100%)";
     }
 });
+
 function openPage(pageName) {
     window.open(pageName, "_self");
 }

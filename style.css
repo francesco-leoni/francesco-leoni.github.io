@@ -55,7 +55,6 @@ p {
     color: black;
 } */
 
-
 /* .navbar-links a:hover {
     text-decoration: underline;
 } */
@@ -96,7 +95,7 @@ p {
 
 .gallery {
     width: 100%;
-    min-height: 100vh;
+    min-height: 92vh;
     background-color: #333333;
     display: flex;
     flex-wrap: nowrap;
@@ -105,10 +104,13 @@ p {
 }
 
 .gallery-item {
+    position: relative;
     display: flex;
     flex-direction: column;
-    width: 26%;
+    height: 65vh;
+    width: 22%;
     text-align: center;
+    justify-content: space-evenly;
 }
 
 .gallery-item img {
@@ -124,30 +126,32 @@ p {
 }
 
 .gallery-item-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
     color: white;
     border-radius: 10px;
     text-align: center;
 }
 .gallery-item h3 {
-    margin-top: 1em;
     font-size: 2.7vw;
 }
 .gallery-item h4 {
-    margin: 2em 0px;
     font-size: 1.2vw;
 }
 
 .gallery-item button {
     width: 55%;
-    margin-top: 15px;
     padding: 10px 20px;
     background-color: white;
     color: #4d4d4d;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 17px;
-    transition: all 0.3s ease;
+    font-size: 1.2vw;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 .gallery-item button:hover {
     background-color: black;
@@ -198,12 +202,17 @@ p {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    /* gap: 5vw; */
 }
 .video-section .text-container {
+    /* margin-top: 8vw; */
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.african .text-container p {
+    text-align: left;
 }
 .video-section .text-container .text {
     width: 70%;
@@ -221,15 +230,16 @@ p {
 #video-europa {
     width: 70%;
 }
-
 #video-asia {
     width: 70%;
 }
-
 #video-africa {
     height: 80%;
     width: fit-content;
 }
+/* #video-america {
+} */
+
 .video-container .video video {
     border-radius: 10px;
     width: 100%;
@@ -246,16 +256,17 @@ p {
     .gallery {
         flex-direction: column;
         justify-content: space-evenly;
-        gap: 2em;
-        padding: 2em 0em;
+        gap: 4em;
+        padding: 3em 0em;
     }
     .gallery-item {
         flex-direction: row;
-        width: 100%;
+        width: 95%;
+        height: 25vw;
     }
 
     .gallery-item a {
-        margin-left: 1.5em;
+        margin: 0.5vw;
         align-content: center;
         max-width: 35%;
     }
@@ -264,14 +275,17 @@ p {
         width: 100%;
     }
     .gallery-item-text {
-        padding: 2em;
-        flex-grow: 1;
+        padding: 0 1vw;
+    }
+    .gallery-item-text button {
+        width: 30%;
     }
     .gallery-item-text > h3 {
-        font-size: 6vw;
+        font-size: 5vw;
     }
-    .gallery-item-text > h4 {
-        font-size: 2vw;
+    .gallery-item-text > h4,
+    .gallery-item-text button {
+        font-size: 1.5vw;
     }
 
     /* --------------------------------------------------- */
@@ -287,7 +301,7 @@ p {
     }
 
     .video-section .video-container:not(.african .video-container) {
-        height: 60%;
+        height: fit-content;
         width: 100%;
     }
     #video-europa {
@@ -321,9 +335,8 @@ p {
 }
 
 @media screen and (max-width: 900px) {
-    .section-item,
-    .video-section {
-        height: 70vw !important;
+    .section-item {
+        height: 70vw;
     }
     .text h3 {
         font-size: 5.5vw;
@@ -338,8 +351,22 @@ p {
         display: none;
     }
 
+    .gallery-item {
+        height: 30vw;
+    }
+    .gallery-item-text > h3 {
+        font-size: 6vw;
+    }
+    .gallery-item-text > h4,
+    .gallery-item-text button {
+        font-size: 2vw;
+    }
+
     /* --------------------------------------------------- */
 
+    .video-section {
+        height: 90vw !important;
+    }
     .african .text-container h3 {
         text-align: start;
     }
@@ -359,9 +386,8 @@ p {
 }
 
 @media screen and (max-width: 650px) {
-    .section-item,
-    .video-section {
-        height: 85vw !important;
+    .section-item {
+        height: 85vw;
     }
     .text-container h3 {
         font-size: 7vw;
@@ -378,15 +404,17 @@ p {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 607px) {
     .gallery {
         flex-direction: column;
         justify-content: center;
         gap: 3em;
+        height: 460vw;
         padding-top: 3em;
         padding-bottom: 0;
     }
     .gallery-item {
+        height: 100%;
         flex-direction: column;
         align-items: center;
         position: relative;
@@ -410,12 +438,12 @@ p {
     }
     .gallery-item-text {
         padding: 0;
+        padding-top: 1em;
         padding-bottom: 3em;
         width: 80%;
-        flex-grow: 0;
     }
     .background h1 {
-        font-size: 8.5vw;
+        font-size: 8vw;
     }
     .background h2 {
         margin-top: 1em;
@@ -426,6 +454,10 @@ p {
     }
     .gallery-item-text > h4 {
         font-size: 4.5vw;
+    }
+    .gallery-item-text button {
+        font-size: 3.5vw;
+        width: 50%;
     }
 }
 
@@ -457,6 +489,9 @@ p {
     }
     .african .text-container h3 {
         text-align: center;
+    }
+    .african .text-container p {
+        text-align: justify;
     }
     .african .video-container {
         width: 100%;
