@@ -95,7 +95,7 @@ p {
 
 .gallery {
     width: 100%;
-    min-height: 55vw;
+    min-height: 48vw;
     background-color: #333333;
     display: flex;
     flex-wrap: nowrap;
@@ -107,7 +107,7 @@ p {
     position: relative;
     display: flex;
     flex-direction: column;
-    height:45vw;
+    height: 36vw;
     width: 22%;
     text-align: center;
     justify-content: space-evenly;
@@ -211,7 +211,7 @@ p {
     justify-content: center;
     align-items: center;
 }
-.african .text-container p {
+.vertical-video .text-container p {
     text-align: left;
 }
 .video-section .text-container .text {
@@ -226,19 +226,14 @@ p {
 .video-container .video {
     margin-inline: auto;
 }
+.horizontal-video .video {
+    width: 70%;
+}
 
-#video-europa {
-    width: 70%;
-}
-#video-asia {
-    width: 70%;
-}
-#video-africa {
+.vertical-video .video {
     height: 80%;
     width: fit-content;
 }
-/* #video-america {
-} */
 
 .video-container .video video {
     border-radius: 10px;
@@ -290,29 +285,26 @@ p {
 
     /* --------------------------------------------------- */
 
-    .video-section:not(.african) {
+    .horizontal-video {
         flex-direction: column;
         justify-content: space-evenly;
     }
-    .video-section .text-container:not(.african .text-container) {
+    .horizontal-video .text-container {
         flex: 0;
         width: 100%;
         text-align: center;
     }
 
-    .video-section .video-container:not(.african .video-container) {
+    .horizontal-video .video-container {
         height: fit-content;
         width: 100%;
     }
-    #video-europa {
+    .horizontal-video .video {
         width: 35%;
     }
 
     .asian {
         flex-direction: column-reverse !important;
-    }
-    #video-asia {
-        width: 35%;
     }
 }
 
@@ -328,8 +320,7 @@ p {
 }
 
 @media screen and (max-width: 1000px) {
-    #video-europa,
-    #video-asia {
+    .horizontal-video .video {
         width: 40%;
     }
 }
@@ -367,11 +358,10 @@ p {
     .video-section {
         height: 90vw !important;
     }
-    .african .text-container h3 {
+    .vertical-video .text-container h3 {
         text-align: start;
     }
-    #video-europa,
-    #video-asia {
+    .horizontal-video .video {
         width: 50%;
     }
 }
@@ -398,8 +388,7 @@ p {
 
     /* --------------------------------------------------- */
 
-    #video-europa,
-    #video-asia {
+    .horizontal-video .video {
         width: 55%;
     }
 }
@@ -475,29 +464,29 @@ p {
 
     /* --------------------------------------------------- */
 
-    #video-europa,
-    #video-asia {
+    .horizontal-video .video {
         width: 75%;
     }
-    .african {
+
+    .vertical-video {
         height: 180vw !important;
         flex-direction: column;
         justify-content: space-evenly;
     }
-    .african .text-container {
+    .vertical-video .text-container {
         flex: 0;
     }
-    .african .text-container h3 {
+    .vertical-video .text-container h3 {
         text-align: center;
     }
-    .african .text-container p {
+    .vertical-video .text-container p {
         text-align: justify;
     }
-    .african .video-container {
+    .vertical-video .video-container {
         width: 100%;
         height: 55%;
     }
-    #video-africa {
+    .vertical-video .video {
         height: 100%;
     }
 }
